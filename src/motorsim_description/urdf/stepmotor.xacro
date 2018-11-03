@@ -18,8 +18,8 @@
         ixx="1"
         ixy="0"
         ixz="0"
-        iyy="0"
-        iyz="-1"
+        iyy="1"
+        iyz="0"
         izz="1" />
     </inertial>
     <visual>
@@ -50,17 +50,17 @@
     name="shaft">
     <inertial>
       <origin
-        xyz="-0.000861121867187112 -0.000341800191336777 1.53512652504286E-05"
+        xyz="-0.00012249817140968 0.0141141740469127 2.16712378782197E-10"
         rpy="0 0 0" />
       <mass
-        value="0.5" />
+        value="0.005" />
       <inertia
-        ixx="1"
+        ixx="0.1"
         ixy="0"
         ixz="0"
-        iyy="1"
+        iyy="0.0001"
         iyz="0"
-        izz="1" />
+        izz="0.0001" />
     </inertial>
     <visual>
       <origin
@@ -88,16 +88,16 @@
   </link>
   <joint
     name="motorjoint"
-    type="revolute">
+    type="continuous">
     <origin
-      xyz="0 0 0"
-      rpy="0 0 0" />
+      xyz="-0.0008591 -0.0003418 0"
+      rpy="1.5708 0 0" />
     <parent
       link="motorbase" />
     <child
       link="shaft" />
     <axis
-      xyz="0 0 1" />
-<limit upper="3000" lower="-3000" effort="3000" velocity="1000"/>
+      xyz="0 1 0" />
+<limit upper="360" lower="-360" effort="100" velocity="100"/>
   </joint>
 </robot>
