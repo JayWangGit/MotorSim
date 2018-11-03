@@ -17,11 +17,10 @@
     <arg name="debug" value="$(arg debug)"/>
   </include>
 
-  <!-->
-  <param name="robot_description" command="$(find xacro)/xacro.py '$(find MotorSim_description)/urdf/mybot.xacro'"/>
-<-->
+
+  <param name="robot_description" textfile="$(find MotorSim_description)/urdf/StepMotor.sdf"/>
   <node name="MotorSim_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
-   args="-urdf  -model MotorSim" />
+   args="-model MotorSim" />
  
 
 </launch>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sdf version="1.5">
+  <model name="StepMotor">
+    <pose>0 0 0.0473 0 0 0</pose>
+    <plugin name="clock" filename="libgz_clock.so">
+      <topic>/gazebo/frc/time</topic>
+    </plugin>
+    <link name="Motor">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>-0.0173367099092258 -0.0205642135623731 -0.0234857644326863 1.5707963267949 0 1.08947958799167E-16</pose>
+      <must_be_base_link>1</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>0.302970386242336</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>4.49769854527357E-05</ixx>
+          <ixy>2.18375681713999E-21</ixy>
+          <ixz>3.30872245021211E-24</ixz>
+          <iyy>1.70602116721423E-07</iyy>
+          <iyz>3.24916544610829E-21</iyz>
+          <izz>4.49769854527357E-05</izz>
+        </inertia>
+      </inertial>
+      <collision name="Motor_collision">
+        <pose>0.000859097170120963 0.000221595874173549 -0.000341800187754871 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://StepMotor/meshes/Motor_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="Motor_visual">
+        <pose>0.000859097170120963 0.000221595874173549 -0.000341800187754871 0 0 0</pose>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://StepMotor/meshes/Motor.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <link name="shaft">
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <pose>-0.0174592080806356 -0.0205642137790855 -0.00914999451160008 1.5707963267949 0 1.08947958799167E-16</pose>
+      <must_be_base_link>0</must_be_base_link>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <inertial>
+        <mass>0.00509177024649685</mass>
+        <pose>0 0 0 0 0 0</pose>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+      <collision name="shaft_collision">
+        <pose>0.000981595341530684 -0.0141141740469127 -0.000341800404467253 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://StepMotor/meshes/shaft_col.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="shaft_visual">
+        <pose>0.000981595341530684 -0.0141141740469127 -0.000341800404467253 0 0 0</pose>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://StepMotor/meshes/shaft.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="Motor-shaft" type="revolute">
+      <parent>Motor</parent>
+      <child>shaft</child>
+      <pose>0.00012249817140968 -1.73472347597681E-18 -2.16712378782197E-10 0 0 1.5707963267949</pose>
+      <axis>
+        <xyz>-1 -2.22044604925031E-16 0</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+        </dynamics>
+        <limit>
+          <upper>0</upper>
+          <lower>0</lower>
+          <effort>1</effort>
+        </limit>
+      </axis>
+    </joint>
+  </model>
+</sdf>
