@@ -1,10 +1,7 @@
-<gazebo>
-  <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-    <robotNamespace>/MotorSim</robotNamespace>
-  </plugin>
-</gazebo>
+<?xml version='1.0'?>
 <robot
-  name="StepMotor">
+  name="MotorSim" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+  <xacro:include filename="$(find MotorSim_description)/urdf/StepMotor.gazebo" />
   <link
     name="base_link">
     <inertial>
@@ -27,7 +24,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://StepMotor/meshes/base_link.STL" />
+          filename="$(find MotorSim_description)/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -41,7 +38,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://StepMotor/meshes/base_link.STL" />
+          filename="$(find MotorSim_description)/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -67,7 +64,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://StepMotor/meshes/Shaft.STL" />
+          filename="$(find MotorSim_description)/meshes/Shaft.STL" />
       </geometry>
       <material
         name="">
@@ -81,12 +78,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://StepMotor/meshes/Shaft.STL" />
+          filename="$(find MotorSim_description)/meshes/Shaft.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="Motor1"
+    name="MotorJoint"
     type="continuous">
     <origin
       xyz="-0.0008591 -0.0003418 0"

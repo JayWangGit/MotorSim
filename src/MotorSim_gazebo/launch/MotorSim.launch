@@ -18,9 +18,9 @@
   </include>
 
 
-  <param name="robot_description" textfile="$(find MotorSim_description)/urdf/StepMotor.urdf"/>
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find MotorSim_description)/urdf/StepMotor.xacro'"/>
   <node name="MotorSim_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
-   args="-model MotorSim" />
+   args=" -urdf -param robot_description -model MotorSim" />
  
-
+	
 </launch>
