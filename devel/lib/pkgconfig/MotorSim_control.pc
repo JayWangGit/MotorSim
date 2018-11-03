@@ -1,0 +1,8 @@
+prefix=/home/jerrywang/MotorSim/devel
+
+Name: MotorSim_control
+Description: Description of MotorSim_control
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/jerrywang/MotorSim/devel/lib 
+Requires: 

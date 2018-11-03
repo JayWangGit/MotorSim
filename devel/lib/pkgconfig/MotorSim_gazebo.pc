@@ -1,0 +1,8 @@
+prefix=/home/jerrywang/MotorSim/devel
+
+Name: MotorSim_gazebo
+Description: Description of MotorSim_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/jerrywang/MotorSim/devel/lib 
+Requires: 
