@@ -1,0 +1,14 @@
+<?xml version='1.0'?>
+<robot name="MotorSim">
+
+<transmission name="tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="shaft">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Motor1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+</robot>

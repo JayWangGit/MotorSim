@@ -8,3 +8,4 @@
 
 # modified environment variables
 export PWD="/home/jerrywang/MotorSim/build"
+export PYTHONPATH="/home/jerrywang/MotorSim/devel/lib/python2.7/dist-packages:$PYTHONPATH"

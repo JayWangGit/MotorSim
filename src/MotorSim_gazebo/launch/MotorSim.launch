@@ -18,7 +18,7 @@
   </include>
 
 
-  <param name="robot_description" textfile="$(find MotorSim_description)/urdf/StepMotor.sdf"/>
+  <param name="robot_description" textfile="$(find MotorSim_description)/urdf/StepMotor.urdf"/>
   <node name="MotorSim_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
    args="-model MotorSim" />
  
