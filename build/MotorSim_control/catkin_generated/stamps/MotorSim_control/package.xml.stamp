@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>MotorSim_control</name>
+  <name>motorsim_control</name>
   <version>0.0.0</version>
   <description>The MotorSim_control package</description>
 

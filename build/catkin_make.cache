@@ -1,2 +1,2 @@
-MotorSim_control:MotorSim_description:MotorSim_gazebo
+motorsim_control:motorsim_description:motorsim_gazebo
 -DCATKIN_DEVEL_PREFIX=/home/jerrywang/MotorSim/devel -DCMAKE_INSTALL_PREFIX=/home/jerrywang/MotorSim/install -G Unix Makefiles
