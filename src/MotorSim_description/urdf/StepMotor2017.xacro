@@ -1,22 +1,22 @@
 <?xml version='1.0'?>
 <robot
-  name="MotorSim" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  name="MotorSim" xmlns:xacro="http://www.ros.org/wiki/xacro" >
   <xacro:include filename="$(find MotorSim_description)/urdf/StepMotor.gazebo" />
   <link
-    name="MotorBase">
+    name="base_link">
     <inertial>
       <origin
-        xyz="-0.000859097170120963 -0.000199540178000859 0.000341800187754871"
+        xyz="-0.000859097170120963 -0.00022159587417355 0.000341800187754871"
         rpy="0 0 0" />
       <mass
-        value="0.302591270427399" />
+        value="0.302970386242336" />
       <inertia
-        ixx="0.000100341980135441"
-        ixy="-9.86265613966297E-22"
-        ixz="-3.6594987287229E-21"
-        iyy="8.61288345178524E-05"
-        iyz="3.36315957298657E-21"
-        izz="0.000100341980135441" />
+        ixx="4.49769854527357E-05"
+        ixy="-1.98854219257748E-21"
+        ixz="-3.30872245021211E-24"
+        iyy="1.70602116721423E-07"
+        iyz="3.93076227085199E-21"
+        izz="4.49769854527357E-05" />
     </inertial>
     <visual>
       <origin
@@ -24,7 +24,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="$(find MotorSim_description)/meshes/MotorBase.STL" />
+          filename="$(find MotorSim_description)/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -38,7 +38,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="$(find MotorSim_description)/meshes/MotorBase.STL" />
+          filename="$(find MotorSim_description)/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -46,17 +46,17 @@
     name="Shaft">
     <inertial>
       <origin
-        xyz="-0.0001225 0.014114 2.1671E-10"
+        xyz="-0.00012249817140968 0.0141141740469127 2.16712378782197E-10"
         rpy="0 0 0" />
       <mass
-        value="0.0050918" />
+        value="0.00509177024649685" />
       <inertia
-        ixx="2.0456E-06"
-        ixy="-4.6739E-14"
-        ixz="-1.8455E-15"
-        iyy="1.5431E-08"
-        iyz="8.9203E-14"
-        izz="2.0442E-06" />
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
     </inertial>
     <visual>
       <origin
@@ -69,7 +69,7 @@
       <material
         name="">
         <color
-          rgba="0.66667 0.69804 0.76863 1" />
+          rgba="0.666666666666667 0.698039215686274 0.768627450980392 1" />
       </material>
     </visual>
     <collision>
@@ -89,7 +89,7 @@
       xyz="-0.0008591 -0.0003418 0"
       rpy="1.5708 0 0" />
     <parent
-      link="MotorBase" />
+      link="base_link" />
     <child
       link="Shaft" />
     <axis
