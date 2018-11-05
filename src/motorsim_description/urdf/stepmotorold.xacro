@@ -20,11 +20,11 @@
         xyz="-1.73472347597681E-18 -0.000239932345629558 0.0193535938441835"
         rpy="0 0 0" />
       <mass
-        value="0.522970509231659" />
+        value="0.522970509231658" />
       <inertia
         ixx="0.000143448111633865"
-        ixy="3.62654681759611E-22"
-        ixz="-2.1703853094235E-14"
+        ixy="2.61001879753111E-22"
+        ixz="-2.17038528161442E-14"
         iyy="0.000140708440567143"
         iyz="-1.73806186578438E-06"
         izz="0.000150994356797971" />
@@ -57,7 +57,7 @@
     name="shaft">
     <inertial>
       <origin
-        xyz="-5.57804855252468E-05 3.64428279169271E-05 0.0316447657775446"
+        xyz="-5.57804855252451E-05 3.64428279169306E-05 0.0306447657775446"
         rpy="0 0 0" />
       <mass
         value="0.00938942234002253" />
@@ -110,7 +110,6 @@
 
 
 
-
   <transmission name="tran1">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="motorjoint">
@@ -121,6 +120,8 @@
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
+
+
 
 
 

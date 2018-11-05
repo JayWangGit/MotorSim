@@ -1,19 +1,21 @@
 <?xml version="1.0"?>
 
 <robot>
-<gazebo>
-  <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-    <robotNamespace>/motorsim</robotNamespace>
-  </plugin>
-</gazebo>
-  <transmission name="tran1">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="motorjoint">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="motoractuator">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/motorsim</robotNamespace>
+       <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    </plugin>
+  </gazebo>
+
+  <!-- Link1 -->
+  <gazebo reference="motorbase">
+  </gazebo>
+
+  <!-- Link2 -->
+  <gazebo reference="shaft">
+  </gazebo>
+
+
+
 </robot>

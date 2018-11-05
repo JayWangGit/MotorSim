@@ -4,8 +4,8 @@ motorsim:
     type: joint_state_controller/JointStateController
     publish_rate: 50
 
-  # Position Controllers ---------------------------------------
-  shaft_position_controller:
-    type: effort_controllers/JointPositionController
+  # Velocity Controllers ---------------------------------------
+  shaft_velocity_controller:
+    type: velocity_controllers/JointVelocityController
     joint: motorjoint
-    pid: {p: 1, i: 0.0, d: 0.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}

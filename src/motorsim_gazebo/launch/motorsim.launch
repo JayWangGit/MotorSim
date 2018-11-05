@@ -17,9 +17,10 @@
     <arg name="debug" value="$(arg debug)"/>
   </include>
 
+  <param name="robot_description"
+    command="$(find xacro)/xacro --inorder '$(find motorsim_description)/urdf/stepmotor.xacro'" />
 
-  <param name="robot_description" command="$(find xacro)/xacro.py '$(find motorsim_description)/urdf/stepmotor.xacro'"/>
-  <node name="motorsim_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+  <node name="motorsim_spawn" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
    args=" -urdf -param robot_description -model motorsim" />
  
 
