@@ -292,7 +292,7 @@ _catkin_empty_exported_target: cmake_check_build_system
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
-	$(MAKE) -f motorsim_description/CMakeFiles/_catkin_empty_exported_target.dir/build.make motorsim_description/CMakeFiles/_catkin_empty_exported_target.dir/build
+	$(MAKE) -f motorsim_control/CMakeFiles/_catkin_empty_exported_target.dir/build.make motorsim_control/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
 
 # Help Target
